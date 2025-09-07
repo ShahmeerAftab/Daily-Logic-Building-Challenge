@@ -77,4 +77,69 @@ userBtn.addEventListener("click", () => {
   
 });
 
+// ................................. Logic:5..........................................
+const submitBtn=document.querySelector(".submitBtn");
+submitBtn.addEventListener("click",()=>{
+const userInput=document.querySelector("#userWord").value;
+const reverseString=userInput.split("").reverse().join("");
+console.log(reverseString);
+})
 
+// ................................. Logic:6..........................................
+const submitButton=document.querySelector(".submitButton");
+submitButton.addEventListener("click",()=>{
+const pallinWord=document.querySelector("#pallinWord").value;
+
+const changeIntoArray=pallinWord.split("");
+console.log(changeIntoArray);
+
+const reverseWord=[...changeIntoArray].reverse();
+console.log(reverseWord);
+
+const showOutput=changeIntoArray.join()===reverseWord.join()?"Ooh It's Palindrome":"It's  not Palindrome";
+console.log(showOutput);
+
+})
+
+// ................................. Logic:7..........................................
+
+const subButton=document.querySelector(".subButton");
+console.log(subButton);
+
+subButton.addEventListener("click",()=>{
+const sentence=document.querySelector("#sentence").value.trim();
+console.log(sentence);
+
+const splitSentence=sentence.split(" ");
+console.log(splitSentence);
+
+const filterWords=splitSentence.filter((e)=>e!==" ");
+console.log(filterWords);
+
+
+const countLength=filterWords.length;
+console.log(countLength);
+
+})
+
+// ................................. Logic:8..........................................
+
+const subBtn=document.querySelector(".subBtn");
+console.log(subBtn);
+
+subBtn.addEventListener("click",()=>{
+  const userNumber=document.querySelector("#userNumber").value;
+  console.log(userNumber);
+
+  const splitUserNum=userNumber.split("");
+  console.log(splitUserNum);
+
+  const removeDuplicate=[...new Set(splitUserNum)];
+  console.log(removeDuplicate);
+
+  const sort=removeDuplicate.sort((a,b)=>b-a);
+  console.log(sort);
+
+ console.log(sort[1]);
+  
+})
